@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A277A2BA-9ACE-4D5B-A784-9E3D5EA30747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWebApiServer", "src\DotNetWebApiServer\DotNetWebApiServer.csproj", "{DEE43AF4-1CB9-4895-B811-F6854B03E683}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebApi", "src\DotNetWebApiServer\DotNetCoreWebApi.csproj", "{DEE43AF4-1CB9-4895-B811-F6854B03E683}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreClient", "src\DotNetCoreClient\DotNetCoreClient.csproj", "{70C701B0-BB21-4B25-8074-07D0B0039DFE}"
 EndProject
