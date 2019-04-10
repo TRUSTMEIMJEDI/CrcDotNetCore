@@ -1,13 +1,29 @@
-GET http://localhost:54530/api/measurement
+GET http://localhost:54530/api/measurement 
+
+###
+
+GET http://localhost:54530/api/measurement/1
+
+###
+
+GET http://localhost:54530/api/measurement/2
+
+###
+
+GET http://localhost:54530/api/measurement/3
+
+###
+DELETE http://localhost:54530/api/measurement/10
 
 ###
 
 POST http://localhost:54530/api/measurement/
-Content-Type: application/json
+content-type: application/json
 
 {
-    "name": "Measurement_04",
-    "value": ,
-    "createdBy": "Operator 1",
-    "createdAt": "2019-04-10T17:13:34"
+  "name": "Measurement_999",
+  "value": 0.15,
+  "createdBy": "Operator 2",
+  "createdAt": "2019-04-09T00:01:00"
 }
+
