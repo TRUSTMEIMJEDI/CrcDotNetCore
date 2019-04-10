@@ -1,0 +1,13 @@
+GET http://localhost:54530/api/measurement
+
+###
+
+POST http://localhost:54530/api/measurement/
+Content-Type: application/json
+
+{
+    "name": "Measurement_04",
+    "value": ,
+    "createdBy": "Operator 1",
+    "createdAt": "2019-04-10T17:13:34"
+}
