@@ -30,14 +30,24 @@ namespace DotNetCoreWebApi.Controllers
         [HttpGet("{id}", Name = "Get")]
         public async Task<IActionResult> Get(long id)
         {
-            var measurements = await this.measurementRepository.Get(id);
+            var measurement = await this.measurementRepository.Get(id);
 
-            return Ok(measurements);
+            if(measurement == null)
+            {
+                return NotFound("The measurement record could not be found");
+            }
+
+            return Ok(measurement);
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(Measurement measurement)
         {
+            if (measurement == null)
+            {
+                return BadRequest("Measurement is null");
+            }
+
             await this.measurementRepository.Add(measurement);
 
             return CreatedAtAction(nameof(Get), new { id = measurement.Id }, measurement);
@@ -48,6 +58,11 @@ namespace DotNetCoreWebApi.Controllers
         {
             var measurementToUpdate = await this.measurementRepository.Get(id);
 
+            if (measurementToUpdate == null)
+            {
+                return NotFound("The measurement record could not be found");
+            }
+
             await this.measurementRepository.Update(measurementToUpdate, measurement);
 
             return NoContent();
@@ -57,6 +72,11 @@ namespace DotNetCoreWebApi.Controllers
         public async Task<IActionResult> Delete(long id, Measurement measurement)
         {
             var measurementToDelete = await this.measurementRepository.Get(id);
+
+            if (measurementToDelete == null)
+            {
+                return NotFound("The measurement record could not be found");
+            }
 
             await this.measurementRepository.Delete(measurementToDelete);
 
