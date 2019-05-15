@@ -15,7 +15,7 @@
                 data.name = e.name
                 data.value = e.value
                 data.createdBy = 'Operator'
-                data.createdAt = '2019-04-19T09:11:40.019'
+                data.createdAt = (new Date()).toISOString()
                 _this._serivce.post(data)
             }
 
